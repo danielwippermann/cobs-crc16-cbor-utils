@@ -1,7 +1,13 @@
 {
   "name": "cobs-crc16-cbor-utils",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "src/index.js",
+  "keywords": [
+    "COBS",
+    "CRC-16",
+    "CRC-16-CCITT",
+    "CBOR"
+  ],
   "repository": "https://github.com/danielwippermann/cobs-crc16-cbor-utils.git",
   "bugs": "https://github.com/danielwippermann/cobs-crc16-cbor-utils/issues",
   "author": "Daniel Wippermann <Daniel.Wippermann@gmail.com>",
