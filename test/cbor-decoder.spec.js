@@ -55,6 +55,8 @@ describe('cbor module:', () => {
         expectDecodeResultToEqual('F6', null);
         expectDecodeResultToEqual('F7', undefined);
 
+        expectDecodeResultToEqual('FA461C4200', 10000.5);
+
         expect(() => {
             expectDecodeResultToEqual('FF', undefined);
         }).toThrow('Unsupported type 7/31');

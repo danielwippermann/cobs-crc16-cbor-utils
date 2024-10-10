@@ -71,7 +71,12 @@ class CborEncoder extends EventEmitter {
 
     _encode(value) {
         if (typeof value === 'number') {
-            if (value >= 0) {
+            if (!Number.isInteger(value)) {
+                const buffer = Buffer.alloc(4);
+                buffer.writeFloatBE(value, 0);
+                this._encodeMajorAndMinorType(7, 0x1A);
+                this._concatSlice(buffer);
+            } else if (value >= 0) {
                 this._encodeMajorTypeAndArg(0, value);
             } else {
                 const absValue = -1 - value;

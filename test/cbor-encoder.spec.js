@@ -255,6 +255,8 @@ describe('cbor module:', () => {
             expectEncodeToEqual(null, 'f6');
             expectEncodeToEqual(undefined, 'f7');
 
+            expectEncodeToEqual(10000.5, 'fa461c4200');
+
             expect(() => {
                 expectEncodeToEqual(Symbol.iterator);
             }).toThrow('Unsupported value type symbol');
@@ -297,6 +299,8 @@ describe('cbor module:', () => {
         expectEncodeResultToEqual(true, 'f5');
         expectEncodeResultToEqual(null, 'f6');
         expectEncodeResultToEqual(undefined, 'f7');
+
+        expectEncodeResultToEqual(10000.5, 'fa461c4200');
 
         const buffer1 = cborEncode([ Buffer.alloc(1024), Buffer.alloc(1024) ]);
         expect(buffer1.toString('hex')).toMatch(/^82590400(00){1024}590400(00){1024}$/);

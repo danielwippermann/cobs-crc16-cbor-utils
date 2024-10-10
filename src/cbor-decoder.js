@@ -103,14 +103,18 @@ class Decoder {
                 }
             }
         } else if (major === 7) {
-            if (arg === 20) {
+            if (minor === 20) {
                 result = false;
-            } else if (arg === 21) {
+            } else if (minor === 21) {
                 result = true;
-            } else if (arg === 22) {
+            } else if (minor === 22) {
                 result = null;
-            } else if (arg === 23) {
+            } else if (minor === 23) {
                 result = undefined;
+            } else if (minor === 26) {
+                const buffer = Buffer.alloc(4);
+                buffer.writeUInt32BE(arg, 0);
+                result = buffer.readFloatBE(0);
             } else {
                 throw new Error(`Unsupported type ${major}/${minor}`);
             }
