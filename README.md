@@ -78,6 +78,18 @@ The library exports two value decoder classes:
 Both are `EventEmitter`s and emit `packet` events whenever a value was sucessfully decoded.
 
 
+## Changelog
+
+### `0.2.0` (WIP)
+
+- Add support for 32-bit floating point numbers.
+
+
+### `0.1.0`
+
+- Initial release
+
+
 ## License
 
 ```
