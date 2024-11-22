@@ -1,4 +1,4 @@
-const { cborDecode } = require('./cbor-decoder');
+const { CborDecoder, cborDecode } = require('./cbor-decoder');
 const { CborEncoder, cborEncode } = require('./cbor-encoder');
 const { Crc16 } = require('./crc16');
 const { CobsDecoder } = require('./cobs-decoder');
@@ -12,6 +12,7 @@ const { CobsCrc16CborEncoder } = require('./cobs-crc16-cbor-encoder');
 
 module.exports = {
     Crc16,
+    CborDecoder,
     cborDecode,
     CborEncoder,
     cborEncode,

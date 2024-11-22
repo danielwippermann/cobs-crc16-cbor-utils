@@ -12,9 +12,11 @@ describe('index module:', () => {
         expectObjectOwnPropertyNamesToEqual(indexModule, [
             'Crc16',
 
+            'CborDecoder',
+            'cborDecode',
+
             'CborEncoder',
             'cborEncode',
-            'cborDecode',
 
             'CobsDecoder',
             'CobsEncoder',
