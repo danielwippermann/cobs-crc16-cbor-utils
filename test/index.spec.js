@@ -11,6 +11,7 @@ describe('index module:', () => {
     it('should export correctly', () => {
         expectObjectOwnPropertyNamesToEqual(indexModule, [
             'Crc16',
+            'Crc32',
 
             'CborDecoder',
             'cborDecode',

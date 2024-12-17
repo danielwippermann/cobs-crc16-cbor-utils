@@ -8,7 +8,7 @@ const {
 
 const cborEncoderModule = require('../src/cbor-encoder');
 
-describe('cbor module:', () => {
+describe('cbor-encoder module:', () => {
 
     it('should export correctly', () => {
         expectObjectOwnPropertyNamesToEqual(cborEncoderModule, [
