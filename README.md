@@ -80,9 +80,10 @@ Both are `EventEmitter`s and emit `packet` events whenever a value was sucessful
 
 ## Changelog
 
-### `0.2.0` (WIP)
+### `0.2.0`
 
 - Add support for 32-bit floating point numbers.
+- Add initial support for CRC-32
 
 
 ### `0.1.0`
